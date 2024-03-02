@@ -12,7 +12,7 @@ import { api } from "@/convex/_generated/api";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useApiMutation } from "@/hooks/useApiMutation";
 
-import { Footer } from "./footer";
+import { Footer } from "./Footer";
 import { Overlay } from "./Overlay";
 
 interface BoardCardProps {
