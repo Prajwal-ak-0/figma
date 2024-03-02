@@ -26,11 +26,11 @@ export const OrgSidebar = () => {
           <Image
             src="/logo.svg"
             alt="Logo"
-            height={60}
-            width={60}
+            height={40}
+            width={40}
           />
           <span className={cn(
-            "font-semibold text-2xl",
+            "font-semibold text-3xl",
             font.className,
           )}>
             Board
