@@ -14,6 +14,7 @@ import { useApiMutation } from "@/hooks/useApiMutation";
 
 import { Footer } from "./Footer";
 import { Overlay } from "./Overlay";
+import { Actions } from "@/components/Actions";
 
 interface BoardCardProps {
   id: string;
@@ -77,7 +78,7 @@ export const BoardCard = ({
             className="object-fit"
           />
           <Overlay />
-          {/* <Actions
+          <Actions
             id={id}
             title={title}
             side="right"
@@ -89,7 +90,7 @@ export const BoardCard = ({
                 className="text-white opacity-75 hover:opacity-100 transition-opacity"
               />
             </button>
-          </Actions> */}
+          </Actions>
         </div>
         <Footer
           isFavorite={isFavorite}
