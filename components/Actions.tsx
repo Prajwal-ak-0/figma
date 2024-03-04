@@ -33,7 +33,7 @@ export const Actions = ({
   title,
 }: ActionsProps) => {
   const { onOpen } = useRenameModal();
-//   const { mutate, pending } = useApiMutation(api.board.remove);
+  const { mutate, pending } = useApiMutation(api.board.remove);
 
   const onCopyLink = () => {
     navigator.clipboard.writeText(
@@ -43,15 +43,11 @@ export const Actions = ({
       .catch(() => toast.error("Failed to copy link"))
   };
 
-//   const onDelete = () => {
-//     mutate({ id })
-//       .then(() => toast.success("Board deleted"))
-//       .catch(() => toast.error("Failed to delete board"));
-//   };
-
   const onDelete = () => {
-    console.log('Delete')
-  }
+    mutate({ id })
+      .then(() => toast.success("Board deleted"))
+      .catch(() => toast.error("Failed to delete board"));
+  };
 
   return (
     <DropdownMenu>
@@ -81,7 +77,7 @@ export const Actions = ({
         <ConfirmModal
           header="Delete board?"
           description="This will delete the board and all of its contents."
-        //   disabled={pending}
+          disabled={pending}
           onConfirm={onDelete}
         >
           <Button

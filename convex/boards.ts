@@ -85,5 +85,5 @@ export const get = query({
         // const boardsWithFavoriteBoolean = Promise.all(boardsWithFavoriteRelation);
 
         // return boardsWithFavoriteBoolean;
-    },
+    }, 
 });
