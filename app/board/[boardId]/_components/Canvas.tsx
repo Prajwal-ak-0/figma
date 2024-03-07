@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import Participants from './Participants'
+import {Participants} from './Participants'
 import Toolbar from './Toolbar'
 import { useSelf } from '@/liveblocks.config'
 import { Info } from './Info'
